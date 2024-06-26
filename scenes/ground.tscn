@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://mrb1s8genhwh"]
+
+[ext_resource type="Texture2D" uid="uid://cet4cekw32tsa" path="res://Assets-flappy-brid-tut/base.png" id="1_0t45s"]
+[ext_resource type="Script" path="res://scenes/ground.gd" id="1_0v7jq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pffve"]
+size = Vector2(336, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgjyo"]
+size = Vector2(336, 10)
+
+[node name="Ground" type="Node2D"]
+script = ExtResource("1_0v7jq")
+
+[node name="Ground1" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground1"]
+texture = ExtResource("1_0t45s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground1"]
+position = Vector2(0, -51)
+shape = SubResource("RectangleShape2D_pffve")
+
+[node name="Ground2" type="Area2D" parent="."]
+position = Vector2(336, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground2"]
+texture = ExtResource("1_0t45s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_hgjyo")
