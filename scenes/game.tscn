@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bt5qvkj567yxm"]
+[gd_scene load_steps=5 format=3 uid="uid://bt5qvkj567yxm"]
 
 [ext_resource type="PackedScene" uid="uid://cddxcx27entch" path="res://scenes/player_bird.tscn" id="1_ar0hd"]
 [ext_resource type="Texture2D" uid="uid://bwf5i0qyei8n0" path="res://Assets-flappy-brid-tut/background-day.png" id="1_tvh6l"]
 [ext_resource type="PackedScene" uid="uid://mrb1s8genhwh" path="res://scenes/ground.tscn" id="3_kuqsn"]
+[ext_resource type="PackedScene" uid="uid://ouwued2jt2vy" path="res://scenes/pipe_spawner.tscn" id="4_nye3m"]
 
 [node name="Game" type="Node2D"]
 
@@ -15,3 +16,5 @@ texture = ExtResource("1_tvh6l")
 
 [node name="Ground" parent="." instance=ExtResource("3_kuqsn")]
 position = Vector2(24, 200)
+
+[node name="PipeSpawner" parent="." instance=ExtResource("4_nye3m")]

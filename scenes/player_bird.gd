@@ -4,7 +4,7 @@ class_name PlayerBird
 
 # create vars, that can be edited via the inspector with @export var
 @export var gravity = 900.0
-@export var jump_force = -900
+@export var jump_force = -290
 @export var rotation_speed = 2
 
 @onready var animation_player = $AnimationPlayer

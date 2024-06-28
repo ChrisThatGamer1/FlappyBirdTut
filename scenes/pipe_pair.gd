@@ -11,7 +11,8 @@ func set_speed(new_speed):
 	speed = new_speed
 
 func _process(delta):
-	position.x = speed * delta
+	position.x += speed * delta
+	print(position.x)
 
 
 func _on_body_entered(body):
@@ -22,3 +23,7 @@ func _on_point_scored(body):
 
 
 
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()
