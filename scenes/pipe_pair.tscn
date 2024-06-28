@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://33dbbxgotifm"]
+[gd_scene load_steps=6 format=3 uid="uid://33dbbxgotifm"]
 
 [ext_resource type="Texture2D" uid="uid://drx10uoxjpba5" path="res://Assets-flappy-brid-tut/pipe-green.png" id="1_5kkww"]
+[ext_resource type="Script" path="res://scenes/pipe_pair.gd" id="1_mt46p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqbhu"]
 size = Vector2(50, 223)
@@ -12,6 +13,7 @@ size = Vector2(46, 198)
 size = Vector2(10.5, 151)
 
 [node name="PipePair" type="Node2D"]
+script = ExtResource("1_mt46p")
 
 [node name="TopPipe" type="Area2D" parent="."]
 position = Vector2(0, -300)
@@ -40,3 +42,7 @@ position = Vector2(60, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score"]
 position = Vector2(-14, 2)
 shape = SubResource("RectangleShape2D_bcoat")
+
+[connection signal="body_entered" from="TopPipe" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="BottomPipe" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Score" to="." method="_on_point_scored"]
