@@ -1,6 +1,8 @@
 extends CharacterBody2D
-
+	
 class_name PlayerBird
+
+signal game_started
 
 # create vars, that can be edited via the inspector with @export var
 @export var gravity = 900.0
@@ -22,6 +24,7 @@ func _ready():
 func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") && should_process_input:
 		if !is_started:
+			game_started.emit()
 			animation_player.play("flap_wings")
 			is_started = true
 		jump()
