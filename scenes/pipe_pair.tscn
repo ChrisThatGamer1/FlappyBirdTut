@@ -4,26 +4,26 @@
 [ext_resource type="Script" path="res://scenes/pipe_pair.gd" id="1_mt46p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqbhu"]
-size = Vector2(50, 223)
+size = Vector2(49.0006, 221)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jt3qq"]
-size = Vector2(46, 198)
+size = Vector2(45, 196)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcoat"]
-size = Vector2(10.5, 151)
+size = Vector2(10.5, 111)
 
 [node name="PipePair" type="Node2D"]
 script = ExtResource("1_mt46p")
 
 [node name="TopPipe" type="Area2D" parent="."]
-position = Vector2(0, -300)
+position = Vector2(0, -315)
 rotation = 3.14159
 
 [node name="Sprite2D" type="Sprite2D" parent="TopPipe"]
 texture = ExtResource("1_5kkww")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopPipe"]
-position = Vector2(-1.95507e-05, -127.5)
+position = Vector2(-0.49971, -126.5)
 shape = SubResource("RectangleShape2D_wqbhu")
 
 [node name="BottomPipe" type="Area2D" parent="."]
@@ -33,14 +33,14 @@ position = Vector2(0, 300)
 texture = ExtResource("1_5kkww")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomPipe"]
-position = Vector2(0, -141)
+position = Vector2(-0.5, -140)
 shape = SubResource("RectangleShape2D_jt3qq")
 
 [node name="Score" type="Area2D" parent="."]
-position = Vector2(60, 0)
+position = Vector2(50, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Score"]
-position = Vector2(-14, 2)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_bcoat")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
